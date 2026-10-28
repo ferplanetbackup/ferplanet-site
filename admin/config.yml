@@ -13,5 +13,7 @@ collections:
         label: "Pagina Principale"
         name: "home"
         fields:
-          - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Testo Principale", name: "body", widget: "markdown" }
+          - { label: "Titolo Principale (Hero)", name: "title", widget: "string" }
+          - { label: "Sottotitolo", name: "subtitle", widget: "string" }
+          - { label: "Testo Chi Siamo", name: "body", widget: "markdown" }
+          - { label: "URL o Embed PDF Sfogliabile", name: "pdf_embed", widget: "string", required: false }
