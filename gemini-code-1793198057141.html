@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferplanet - Ferramenta, Utensileria e Forniture Industriali</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Netlify Identity Widget per Login Amministratore -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="flex items-center space-x-3">
+                <span class="text-3xl font-extrabold text-amber-500 tracking-tight">FERPLANET</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#chi-siamo" class="hover:text-amber-400 transition">Chi Siamo</a>
+                <a href="#prodotti" class="hover:text-amber-400 transition">Settori</a>
+                <a href="#volantino" class="hover:text-amber-400 transition">Volantino & Cataloghi</a>
+                <a href="#contatti" class="hover:text-amber-400 transition">Contatti</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 id="hero-title" class="text-4xl sm:text-5xl font-black text-amber-400 mb-4">
+                Ferramenta & Utensileria Professionale
+            </h1>
+            <p id="hero-subtitle" class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+                Forniture per privati, artigiani e industrie. Scopri i nostri cataloghi e le promozioni in corso.
+            </p>
+            <a href="#volantino" class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3 rounded-lg shadow-lg transition transform hover:-translate-y-0.5">
+                Sfoglia il Volantino
+            </a>
+        </div>
+    </section>
+
+    <!-- Sezione Chi Siamo -->
+    <section id="chi-siamo" class="py-16 max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 text-slate-900">Chi Siamo</h2>
+        <div id="about-text" class="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto">
+            <p>Siamo specializzati nella vendita di utensileria meccanica, ferramenta, antinfortunistica e fissaggi. Offriamo consulenza tecnica personalizzata e prodotti dei migliori marchi per il professionista e l'hobbista esigente.</p>
+        </div>
+    </section>
+
+    <!-- Sezione PDF Sfogliabile -->
+    <section id="volantino" class="bg-slate-200 py-16 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Catalogo & Volantino In Corso</h2>
+            <p class="text-slate-600 mb-8">Sfoglia il nostro volantino promozionale direttamente dal browser senza scaricare file pesanti.</p>
+
+            <!-- Container Iframe PDF Sfogliabile -->
+            <div class="w-full bg-white rounded-xl shadow-xl overflow-hidden p-2">
+                <div class="aspect-w-16 aspect-h-9 w-full min-h-[500px] sm:min-h-[600px] flex items-center justify-center bg-slate-100">
+                    <iframe id="pdf-flipbook" 
+                        src="https://online.fliphtml5.com/example/demo/" 
+                        class="w-full h-[500px] sm:h-[650px] border-0 rounded-lg" 
+                        seamless="seamless" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allowfullscreen="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti & Orari -->
+    <section id="contatti" class="py-16 max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100">
+            <h3 class="text-2xl font-bold mb-6 text-slate-900">Contatti</h3>
+            <ul class="space-y-4 text-slate-700">
+                <li class="flex items-center space-x-3">
+                    <span class="font-semibold w-24">Indirizzo:</span>
+                    <span id="contact-address">Via Esempio 123, Vigevano (PV)</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <span class="font-semibold w-24">Telefono:</span>
+                    <span id="contact-phone">+39 0381 123456</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <span class="font-semibold w-24">Email:</span>
+                    <span id="contact-email">info@ferplanet.com</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-md border border-slate-100">
+            <h3 class="text-2xl font-bold mb-6 text-slate-900">Orari di Apertura</h3>
+            <p id="contact-hours" class="text-slate-700 whitespace-pre-line leading-relaxed">
+                Lunedì - Venerdì: 08:00 - 12:30 / 14:00 - 19:00
+                Sabato: 08:30 - 12:30
+                Domenica: Chiuso
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center mt-auto border-t border-slate-800">
+        <p class="text-sm">&copy; <span id="year"></span> Ferplanet. Tutti i diritti riservati.</p>
+    </footer>
+
+    <!-- Script Redirect Netlify Identity -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
