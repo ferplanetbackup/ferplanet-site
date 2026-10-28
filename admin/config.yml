@@ -2,22 +2,16 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  - name: "contenuti"
+  - name: "pagine"
     label: "Contenuti del Sito"
     files:
       - file: "index.html"
         label: "Pagina Principale"
         name: "home"
         fields:
-          - { label: "Titolo Principale (Hero)", name: "hero-title", widget: "string" }
-          - { label: "Sottotitolo", name: "hero-subtitle", widget: "text" }
-          - { label: "Testo Chi Siamo", name: "about-text", widget: "markdown" }
-          - { label: "URL o Embed Iframe PDF Sfogliabile (FlipHTML5 / Issuu)", name: "pdf-flipbook", widget: "string", hint: "Incolla l'URL dell'embed fornito da FlipHTML5" }
-          - { label: "Indirizzo", name: "contact-address", widget: "string" }
-          - { label: "Telefono", name: "contact-phone", widget: "string" }
-          - { label: "Email", name: "contact-email", widget: "string" }
-          - { label: "Orari di Apertura", name: "contact-hours", widget: "text" }
+          - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Testo Principale", name: "body", widget: "markdown" }
