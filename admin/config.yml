@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tuonomeutente/ferplanet-site  # <-- Sostituisci con il tuo username GitHub e il nome esatto della repository
+  repo: ferplanetbackup/ferplanet-site
   branch: main
 
 media_folder: "images/uploads"
